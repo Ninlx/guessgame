@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeffern Dulla Malinao">
+    <meta name="keywords" content="Guess The Number | Simple Game with the used of HTML and CSS markup language and the functionality of this game is being develop with JavaScript programming language.">
+    <meta name="description" content="Guess the number game is a hard game that has a function that is assigned a random number between 1 and 100, calculated using a mathematical algorithm.">
+    <link rel="shortcut icon" href="ico/favicon.png" type="image/x-icon">
+    <title>Guess The Number | Simple Game with JavaScript</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+
+<section class="main">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="content mb-5">
+                    <h1 class="text-uppercase text-center pt-5 fw-bolder" style="letter-spacing: 5px;">number guessing game</h1>
+                    <br>
+                    <p class="text-center fs-5">I have selected random number between 1 and 100. <br> See if you can guess it in 10 turns or fewer. <br> I'll tell you if your guess was too high or too low. Good luck!</p>
+                </div>
+                <form class="py-2 pb-5">
+                    <div class="input-group">
+                        <label for="guesstheNumber" class="input-group-text">Enter a guess number</label>
+                        <input type="text" name="guesstheNum" id="inputGuess" class="form-control" autocomplete="off">
+                        <input type="submit" value="Guess" id="submitGuess" class="btn btn-primary">
+                    </div>
+                </form>
+                <div class="result">
+                    <span id="guesses" class="text-light bg-primary form-control p-2 text-capitalize" style="letter-spacing: 3px; font-weight: 500;">Previous Guesses : </span>
+
+                    <p id="result" class="text-light bg-danger p-2 mt-4 text-uppercase text-center" style="letter-spacing: 3px; font-weight: 500;">get ready!</p>
+
+                    <p id="promptLetter" class="text-warning bg-dark p-2 text-uppercase text-center" style="letter-spacing: 3px; font-weight: 500;">get ready!</p>
+                </div>
+                  <input type="button" value="start a new game" id="resetGame" class="btn btn-primary text-uppercase" style="letter-spacing: 3px; font-weight: 500; display: none;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/app.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
