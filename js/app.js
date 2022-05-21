@@ -1,10 +1,12 @@
 // random number between 1 and 100
 let randomNum = Math.floor(Math.random() * 100) + 1;
 
+// getting the elemens of result from the dom
 const guesses = document.getElementById("guesses");
 const result = document.getElementById("result");
 const promptLetter = document.getElementById("promptLetter");
 
+// getting the input elements from the dom
 const inputGuess = document.getElementById("inputGuess");
 const submitGuess = document.getElementById("submitGuess");
 
@@ -19,7 +21,6 @@ function checkGuess(e) {
     guesses.innerText = "previous guesses : ";
   }
   guesses.textContent += userGuess + " ";
-
   if (userGuess === randomNum) {
     result.textContent = "congratulations! you got it right";
     promptLetter.textContent = "better luck next game";
@@ -48,7 +49,6 @@ function setGameOver() {
   submitGuess.disabled = true;
   resetBtn = document.getElementById("resetGame");
   resetBtn.addEventListener("click", resGame);
-
   if ((guessCount = 10)) {
     resetBtn.style.display = "block";
   }
@@ -61,7 +61,6 @@ function resGame() {
   for (const resetParam of resetParams) {
     resetParam.textContent = "get ready!";
   }
-
   const resetParams0 = document.querySelectorAll(".result span");
   for (const resetParam0 of resetParams0) {
     resetParam0.textContent = "Previous Guesses : ";
